@@ -70,7 +70,7 @@ int main() {
     for (int i = 1; i < room_count; i++) {
         rooms[i]->has_creature = 1;
         rooms[i]->creature_health = 20 + rand() % 31;
-        rooms[i]->item = strdup(item_descriptions[rand() % 30]); // Random item
+        rooms[i]->item = strdup(item_descriptions[rand() % 30]);
         printf("Room %d contains: %s, Creature: %s (%d health)\n",
                i + 1, rooms[i]->item, creature_descriptions[i % 8], rooms[i]->creature_health);
     }
@@ -85,7 +85,7 @@ int main() {
     }
 
 
-    Player player = {10, 150, 20, 30, NULL, 0, 10, rooms[0], 100}; // 50 coins başlangıç
+    Player player = {10, 150, 20, 30, NULL, 0, 10, rooms[0], 100};
 
 
     player.inventory = malloc(player.inventory_capacity * sizeof(Item *));
@@ -116,13 +116,13 @@ int main() {
         } else if (strncmp(command, "buy", 3) == 0) {
             buy_item(&player, command + 4);
         } else if (strncmp(command, "use", 3) == 0) {
-            char *item_name = command + 4; // Skip "use "
+            char *item_name = command + 4;
             use_item(&player, item_name);
         } else if (strncmp(command, "pickup", 6) == 0) {
-            player.time_remaining--; // Picking up an item costs time
+            player.time_remaining--;
             pickup(&player, command + 7);
         } else if (strcmp(command, "attack") == 0) {
-            player.time_remaining--; // Attacking costs time
+            player.time_remaining--;
             attack(&player);
         } else if (strcmp(command, "check trap") == 0) {
             check_trap(&player);
