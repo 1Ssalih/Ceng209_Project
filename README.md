@@ -1,5 +1,8 @@
 # **Dungeon Adventure Game**
 
+## **Report Link**
+https://docs.google.com/document/d/1BMcW5TRa5rEmX6tPb2vKEOFVo6jKiBTwkz0vLdqhJp4/edit?usp=sharing
+
 ## **Game Description**
 The Dungeon Adventure is a text-based command-line game where you explore rooms, fight creatures, pick up items, and navigate through a dungeon. The game includes a time-limited exploration, dynamic combat system, inventory management, and a market where you can purchase useful items.
 
